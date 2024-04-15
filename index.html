@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./style.css" rel="stylesheet" />
+    <title>Fyle Tax Calculator</title>
+  </head>
+  <body>
+    <div class="main">
+      <div class="gross-income">
+        <div class="tooltip">
+          <label for="gross-anual-income">Enter Gross Annual Income</label>
+          <span
+            class="tooltip-icon"
+            title="Gross annual income is your total salary in a year before any deductions"
+            >&#63;</span
+          >
+        </div>
+        <input
+          type="text"
+          id="gross-anual-income"
+          placeholder="Enter gross annual income"
+        />
+        <span class="error-tooltip" id="gross-income-error"></span>
+      </div>
+      <div class="annual-income">
+        <div class="tooltip">
+          <label for="annual-income">Enter Extra Income</label>
+          <span
+            class="tooltip-icon"
+            title="Extra Income is any additional income you earn in a year"
+            >&#63;</span
+          >
+        </div>
+        <input
+          type="text"
+          id="annual-income"
+          placeholder="Enter extra income from any other sources"
+        />
+        <span class="error-tooltip" id="annual-income-error"></span>
+      </div>
+      <div class="age-group">
+        <div class="tooltip">
+          <label for="age-group">Age Group</label>
+          <span
+            class="tooltip-icon"
+            title="Age group is the category you fall under based on your age"
+            >&#63;</span
+          >
+        </div>
+        <select id="age-group">
+          <option value="0">Select Age Group</option>
+          <option value="1">Below 40</option>
+          <option value="2">40-60</option>
+          <option value="3">Above 60</option>
+        </select>
+        <span class="error-tooltip" id="age-group-error"></span>
+      </div>
+      <div class="payable-deductions">
+        <div class="tooltip">
+          <label for="payable-deductions"
+            >Enter total applicable deductions</label
+          >
+          <span
+            class="tooltip-icon"
+            title="Total applicable deductions are the total amount of deductions you can claim"
+            >&#63;</span
+          >
+        </div>
+        <input
+          type="text"
+          id="payable-deductions"
+          placeholder="Add total applicable deductions"
+        />
+        <span class="error-tooltip" id="deductions-error"></span>
+      </div>
+      <button class="submit-button" onclick="submitForm()">Submit</button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
